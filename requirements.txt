@@ -1,0 +1,7 @@
+# Post-processing requirements
+opencv-python
+ffmpeg-python
+moviepy
+pillow
+requests
+python-dotenv
