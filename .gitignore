@@ -1,0 +1,16 @@
+# Ignore media files and thumbnails
+*.mp4
+*.mkv
+*.mov
+*.wav
+*.mp3
+*.jpg
+*.jpeg
+*.png
+*.webp
+.DS_Store
+Thumbs.db
+
+# Project logs
+logs/
+*.log
