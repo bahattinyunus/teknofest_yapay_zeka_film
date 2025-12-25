@@ -1,18 +1,28 @@
-# Contributing to Teknofest AI Film Project
+# 🎬 Teknofest Yapay Zeka Film Stüdyosu'na Katkı Protokolü
 
-We welcome contributions to this project! Whether you are fixing bugs, improving documentation, or proposing new features, your help is appreciated.
+Bu projeye katkıda bulunmak istediğiniz için teşekkür ederiz! İster hata düzeltin, ister yeni bir yapay zeka modeli entegre edin, ister senaryo akışını iyileştirin; her türlü katkı "Yönetmen Koltuğu"nda değerlidir.
 
-## How to Contribute
+## 🚀 Nasıl Katkıda Bulunabilirsiniz?
 
-1.  **Fork the repository**.
-2.  **Create a new branch** for your feature or bug fix.
-3.  **Make your changes** and ensure they follow the project's style.
-4.  **Submit a pull request** with a clear description of your changes.
+1.  **Depoyu Forklayın (Fork)**: Kendi stüdyo kopyanızı oluşturun.
+2.  **Yeni Bir Dal (Branch) Oluşturun**: Özelliğiniz veya düzeltmeniz için özel bir çalışma alanı yaratın.
+    *   `git checkout -b ozellik/yeni-sahne-uzretici`
+3.  **Değişikliklerinizi Yapın**: Kodunuzu yazın ve sanatınızı konuşturun.
+4.  **Commitleyin**: Değişikliklerinizi net mesajlarla kaydedin.
+    *   `git commit -m "feat: yeni görüntü üretim modülü eklendi"`
+5.  **Pushlayın**: Değişiklikleri kendi dalınıza gönderin.
+    *   `git push origin ozellik/yeni-sahne-uzretici`
+6.  **Pull Request (PR) Gönderin**: Ana stüdyoya birleştirme isteği gönderin.
 
-## Code of Conduct
+## 🛠 Geliştirme Kuralları
 
-Please be respectful and professional in all interactions within the project.
+*   Kodlarınızın temiz ve açıklayıcı olmasına özen gösterin.
+*   Mümkünse test ekleyin.
+*   Yapay zeka modelleriyle çalışırken (örneğin API anahtarları) gizliliğe dikkat edin.
 
-## Questions?
+## 📞 İletişim
 
-If you have any questions, feel free to open an issue or contact the project maintainer.
+Sorularınız mı var? Bir Sorun (Issue) açmaktan çekinmeyin veya doğrudan yapımcı ile iletişime geçin.
+
+---
+*Yaratıcılığın sınırlarını yapay zeka ile zorlayalım.*
