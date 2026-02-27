@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai_film_studio"
+version = "1.0.0"
+authors = [
+  { name="Bahattin Yunus Cetin", email="bahattin@example.com" },
+]
+description = "A professional AI-driven cinematic production pipeline for TEKNOFEST 2025."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Video",
+    "Intended Audience :: Science/Research",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/bahattinyunus/teknofest_yapay_zeka_film"
+"Bug Tracker" = "https://github.com/bahattinyunus/teknofest_yapay_zeka_film/issues"
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+
+[tool.isort]
+profile = "black"
