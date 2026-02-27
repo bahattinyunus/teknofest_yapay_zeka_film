@@ -1,13 +1,13 @@
-# Ignore media files and thumbnails
+# Ignore media files and thumbnails (Except essential assets)
 *.mp4
 *.mkv
 *.mov
 *.wav
 *.mp3
-*.jpg
-*.jpeg
-*.png
-*.webp
+# *.jpg
+# *.jpeg
+# *.png
+# *.webp
 .DS_Store
 Thumbs.db
 
