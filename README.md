@@ -28,6 +28,31 @@
 
 ---
 
+## 🌐 Küresel Kıyaslamalar ve Endüstriyel İlham Kaynakları
+
+Bu proje, dünyadaki öncü yapay zeka film festivallerinden ve açık kaynaklı ileri teknoloji projelerinden ilham alarak geliştirilmektedir.
+
+### 🏆 Uluslararası AI Film Yarışmaları ve Festivaller
+| Yarışma / Festival | Kapsam | Bağlantı |
+| :--- | :--- | :--- |
+| **Global AI Film Award** | 1 Milyar Takipçi Zirvesi kapsamında düzenlenen 1 milyon dolar ödüllü yarışma. | [Web Sitesi](https://1billionsummit.com/) |
+| **Runway AI Film Festival** | Üretken yapay zekanın sinemadaki en prestijli küresel festivali. | [Web Sitesi](https://aiff.runwayml.com/) |
+| **Reply AI Film Festival** | Sentetik hikaye anlatıcılığına odaklanan uluslararası yarışma. | [Web Sitesi](https://www.reply.com/ai-film-festival) |
+| **AI for Good Film Festival** | BM destekli, sosyal etki odaklı yapay zeka film festivali. | [Web Sitesi](https://aiforgood.itu.int/film-festival/) |
+| **K-AIFF** | Kore Uluslararası Yapay Zeka Film Festivali. | [Web Sitesi](https://kaiff.kr/) |
+
+### 🛠️ Açık Kaynaklı State-of-the-Art (SOTA) Projeler
+| Proje İsmi | Öne Çıkan Özellik | Kaynak Kod (GitHub) |
+| :--- | :--- | :--- |
+| **HunyuanVideo** | Tencent'in 13 milyar parametreli ileri düzey video modeli. | [Tencent/HunyuanVideo](https://github.com/Tencent/HunyuanVideo) |
+| **Wan2.1** | Açık kaynaklı en güçlü video üretim suitlerinden biri. | [Wan-Video/WanVideo](https://github.com/Wan-Video/WanVideo) |
+| **Open-Sora** | Sinematik kalitede video üretimi sağlayan açık kaynaklı altyapı. | [hpcaitech/Open-Sora](https://github.com/hpcaitech/Open-Sora) |
+| **LTX-Video** | Düşük VRAM kullanımı ve ses senkronizasyonu ile öne çıkan model. | [Lightricks/LTX-Video](https://github.com/Lightricks/LTX-Video) |
+| **SkyReels-V2** | Sonsuz uzunlukta film üretim mimarisi sunan açık kaynaklı proje. | [SkyReels/SkyReels-V2](https://github.com/SkyReels/SkyReels-V2) |
+| **ComfyUI** | AI medya üretimi için endüstri standardı olan düğüm tabanlı iş akışı. | [comfyanonymous/ComfyUI](https://github.com/comfyanonymous/ComfyUI) |
+
+---
+
 ## 🌍 Proje Vizyonu ve Özgünlük (TEKNOFEST Odaklı)
 
 TEKNOFEST 2025 "Eğitim Teknolojileri / Sanatta Yapay Zeka" vizyonu doğrultusunda geliştirilen bu proje, **sinematografik üretim süreçlerini** uçtan uca otonomlaştıran akıllı bir dijital stüdyo altyapısıdır. 
