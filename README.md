@@ -1,4 +1,4 @@
-﻿![AI Film Banner](assets/banner.png)
+﻿![TEKNOFEST AI Film Banner](assets/teknofest_banner.png)
 
 # 🎬 TEKNOFEST 2025: Yapay Zeka ile Sinema ve Medya Sanatları
 
