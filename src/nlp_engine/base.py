@@ -1,8 +1,9 @@
 from abc import ABC, abstractmethod
 from typing import Dict, List, Any
-from pydantic import BaseModel
+from dataclasses import dataclass, field
 
-class Scene(BaseModel):
+@dataclass
+class Scene:
     """Data model for a single movie scene."""
     scene_id: int
     description: str
@@ -12,11 +13,12 @@ class Scene(BaseModel):
     dialogues: List[Dict[str, str]]
     mood: str
 
-class Script(BaseModel):
+@dataclass
+class Script:
     """Data model for the entire screenplay."""
     title: str
     summary_plot: str
-    scenes: List[Scene]
+    scenes: List[Scene] = field(default_factory=list)
 
 class BaseNLPEngine(ABC):
     """Abstract base class for LLM-based script generation."""

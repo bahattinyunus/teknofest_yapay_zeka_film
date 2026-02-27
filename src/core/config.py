@@ -1,11 +1,9 @@
 import os
 from dotenv import load_dotenv
-from pydantic import Field
-from pydantic_settings import BaseSettings
 
 load_dotenv()
 
-class Settings(BaseSettings):
+class Settings:
     """System settings and environment variables."""
     
     # Project Settings
@@ -21,8 +19,5 @@ class Settings(BaseSettings):
     # Output Settings
     OUTPUT_DIR: str = "outputs"
     ASSETS_DIR: str = "assets"
-    
-    class Config:
-        case_sensitive = True
 
 settings = Settings()
