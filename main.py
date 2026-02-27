@@ -1,36 +1,58 @@
+import argparse
+import sys
 from src.core.config import settings
+from src.core.logger import logger
+from src.core.exceptions import AiFilmError, EngineError
 from src.nlp_engine.base import Script, Scene
 
 class DirectorOrchestrator:
     """The central brain that coordinates the AI Cinematic Universe."""
     
-    def __init__(self):
-        print(f"🎬 Initializing {settings.PROJECT_NAME} v{settings.VERSION}")
-        print("💡 Mode: Orchestration Engine")
+    def __init__(self, debug: bool = False):
+        self.debug = debug or settings.DEBUG
+        logger.info(f"🎬 Initializing {settings.PROJECT_NAME} v{settings.VERSION}")
+        if self.debug:
+            logger.debug("🔧 Debug mode enabled")
 
-    def run_pipeline(self, creative_prompt: str):
+    def run_pipeline(self, creative_prompt: str, output_file: str = "final_film.mp4"):
         """Execute the full end-to-end film production pipeline."""
-        print(f"\n🚀 Phase 1: Conceptualization")
-        print(f"   Using Prompt: '{creative_prompt}'")
-        
-        # In a real scenario, this would call the actual NLP Engine
-        mock_script = self._generate_mock_script(creative_prompt)
-        print(f"   Script Generated: '{mock_script.title}' with {len(mock_script.scenes)} scenes.")
+        try:
+            logger.info(f"🚀 Starting Production Pipeline")
+            logger.info(f"   Creative Prompt: '{creative_prompt}'")
+            
+            # Phase 1: Conceptualization
+            logger.info("Phase 1: Conceptualization (NLP Engine)...")
+            mock_script = self._generate_mock_script(creative_prompt)
+            logger.info(f"   Script Generated: '{mock_script.title}' with {len(mock_script.scenes)} scenes.")
 
-        print(f"\n🎨 Phase 2: Visual Production")
-        for scene in mock_script.scenes:
-            print(f"   Generating visuals for Scene {scene.scene_id}: {scene.location}")
+            # Phase 2: Visual Production
+            logger.info("Phase 2: Visual Production (Vision Engine)...")
+            for scene in mock_script.scenes:
+                logger.debug(f"   Processing Scene {scene.scene_id} visuals at {scene.location}")
 
-        print(f"\n🔊 Phase 3: Audio Synthesis")
-        print(f"   Synthesizing dialogues and scoring music...")
+            # Phase 3: Audio Synthesis
+            logger.info("Phase 3: Audio Synthesis (Audio Engine)...")
+            logger.debug("   Synthesizing dialogues and scoring background music.")
 
-        print(f"\n🎬 Phase 4: Post-Production & Render")
-        print(f"   Assembling final master... [Mock Render Complete]")
-        
-        print(f"\n✅ Production Successful! Final output saved to {settings.OUTPUT_DIR}/final_film.mp4")
+            # Phase 4: Assembly
+            logger.info(f"Phase 4: Post-Production & Assembly...")
+            logger.info(f"✅ Production Successful! Saved to {settings.OUTPUT_DIR}/{output_file}")
+            
+        except AiFilmError as e:
+            logger.error(f"❌ Production Failed! {str(e)}")
+            sys.exit(1)
+        except Exception as e:
+            logger.critical(f"💥 Unexpected System Crash: {str(e)}")
+            if self.debug:
+                raise e
+            sys.exit(1)
 
     def _generate_mock_script(self, prompt: str) -> Script:
         """Creates a placeholder script for demonstration."""
+        # Simulated failure for robustness testing
+        if not prompt or len(prompt) < 3:
+            raise EngineError("NLP", "Prompt is too short for creative processing.")
+            
         return Script(
             title="Algorithm of Destiny",
             summary_plot="A journey through the digital void.",
@@ -47,7 +69,16 @@ class DirectorOrchestrator:
             ]
         )
 
+def main():
+    parser = argparse.ArgumentParser(description="AI Cinematic Universe - Professional Orchestrator CLI")
+    parser.add_argument("--prompt", type=str, required=True, help="Creative prompt to generate the film")
+    parser.add_argument("--output", type=str, default="final_film.mp4", help="Name of the output video file")
+    parser.add_argument("--debug", action="store_true", help="Enable verbose debug logging")
+    
+    args = parser.parse_args()
+    
+    orchestrator = DirectorOrchestrator(debug=args.debug)
+    orchestrator.run_pipeline(args.prompt, args.output)
+
 if __name__ == "__main__":
-    orchestrator = DirectorOrchestrator()
-    sample_prompt = "A robot discovering its own consciousness in a neon-drenched library."
-    orchestrator.run_pipeline(sample_prompt)
+    main()

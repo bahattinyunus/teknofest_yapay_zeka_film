@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  ai-film:
+    build: .
+    volumes:
+      - ./outputs:/app/outputs
+      - ./logs:/app/logs
+      - ./.env:/app/.env
+    environment:
+      - DEBUG=True
+    command: [ "--prompt", "A high-tech lab where a neural network becomes sentient", "--output", "sentience.mp4" ]

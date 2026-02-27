@@ -4,10 +4,12 @@
 
 <div align="center">
   
-  [![Status](https://img.shields.io/badge/DURUM-GELİŞTİRME_AŞAMASINDA-orange?style=for-the-badge&logo=mediamarkttürkiye)](https://github.com/bahattinyunus)
-  [![Tech](https://img.shields.io/badge/MİMARİ-ÜRETKEN_YAPAY_ZEKA-blue?style=for-the-badge&logo=openai)](https://github.com/bahattinyunus)
+  [![Lint](https://github.com/bahattinyunus/teknofest_yapay_zeka_film/actions/workflows/lint.yml/badge.svg)](https://github.com/bahattinyunus/teknofest_yapay_zeka_film/actions/workflows/lint.yml)
+  [![Tests](https://github.com/bahattinyunus/teknofest_yapay_zeka_film/actions/workflows/tests.yml/badge.svg)](https://github.com/bahattinyunus/teknofest_yapay_zeka_film/actions/workflows/tests.yml)
+  [![Docker](https://img.shields.io/badge/Docker-Ready-blue?logo=docker)](Dockerfile)
+  [![Status](https://img.shields.io/badge/DURUM-ELITE_PROD-success?style=for-the-badge&logo=mediamarkttürkiye)](https://github.com/bahattinyunus)
+  [![Tech](https://img.shields.io/badge/MİMARİ-INDUSTRIAL_AI-blue?style=for-the-badge&logo=openai)](https://github.com/bahattinyunus)
   [![License](https://img.shields.io/badge/LİSANS-MIT-green?style=for-the-badge&logo=opensourceinitiative)](LICENSE)
-  [![Python](https://img.shields.io/badge/PYTHON-3.10%2B-black?style=for-the-badge&logo=python)](https://www.python.org/)
   
   ```text
    ________  ________  ___  ___  ________  ________  _____ ______      
@@ -85,9 +87,41 @@ Geliştirici ortamının sorunsuz çalışması için asgari gereksinimler:
 
 ---
 
-## 🚀 Kurulum Protokolü
+## 🚀 Başlatma ve Kullanım (Execution)
 
-Yerel geliştirme ortamını kurmak için aşağıdaki terminal komutlarını çalıştırın.
+Sistemi yerel makinenizde veya Docker üzerinde çalıştırabilirsiniz.
+
+### 1. Komut Satırı Arayüzü (CLI)
+Proje, terminalden doğrudan yönetilebilen gelişmiş bir CLI arayüzüne sahiptir:
+
+```bash
+# Temel kullanım (Yeni bir film başlat)
+python main.py --prompt "Cyberpunk bir dünyada uyanan son insan"
+
+# Gelişmiş kullanım (Çıktı ismi ve hata ayıklama modu)
+python main.py --prompt "Antik Mısır'da dijital piramitler" --output antik_film.mp4 --debug
+```
+
+### 2. Docker ile Çalıştırma
+Hiçbir bağımlılıkla uğraşmadan sistemi Docker üzerinden ayağa kaldırabilirsiniz:
+
+```bash
+# Docker imajını oluşturun
+docker build -t ai-film .
+
+# Konteynerı çalıştırın
+docker run --env-file .env -v $(pwd)/outputs:/app/outputs ai-film --prompt "Sonsuz bir kütüphanede kaybolan AI"
+```
+
+### 3. Docker Compose (Orkestrasyon)
+Birden fazla varyasyon denemek için `docker-compose.yml` dosyasını kullanabilirsiniz:
+```bash
+docker-compose up --build
+```
+
+---
+
+## ⚙️ Kurulum Protokolü (Local Setup)
 
 ### Git ve Sanal Ortam
 ```bash
