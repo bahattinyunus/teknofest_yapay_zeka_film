@@ -1,28 +1,34 @@
-# 🎬 Teknofest Yapay Zeka Film Stüdyosu'na Katkı Protokolü
+# Contributing to AI Cinematic Universe
 
-Bu projeye katkıda bulunmak istediğiniz için teşekkür ederiz! İster hata düzeltin, ister yeni bir yapay zeka modeli entegre edin, ister senaryo akışını iyileştirin; her türlü katkı "Yönetmen Koltuğu"nda değerlidir.
+First off, thank you for considering contributing! It's people like you that make this a great tool for everyone.
 
-## 🚀 Nasıl Katkıda Bulunabilirsiniz?
+## Code of Conduct
 
-1.  **Depoyu Forklayın (Fork)**: Kendi stüdyo kopyanızı oluşturun.
-2.  **Yeni Bir Dal (Branch) Oluşturun**: Özelliğiniz veya düzeltmeniz için özel bir çalışma alanı yaratın.
-    *   `git checkout -b ozellik/yeni-sahne-uzretici`
-3.  **Değişikliklerinizi Yapın**: Kodunuzu yazın ve sanatınızı konuşturun.
-4.  **Commitleyin**: Değişikliklerinizi net mesajlarla kaydedin.
-    *   `git commit -m "feat: yeni görüntü üretim modülü eklendi"`
-5.  **Pushlayın**: Değişiklikleri kendi dalınıza gönderin.
-    *   `git push origin ozellik/yeni-sahne-uzretici`
-6.  **Pull Request (PR) Gönderin**: Ana stüdyoya birleştirme isteği gönderin.
+By participating in this project, you agree to abide by our code of conduct.
 
-## 🛠 Geliştirme Kuralları
+## How Can I Contribute?
 
-*   Kodlarınızın temiz ve açıklayıcı olmasına özen gösterin.
-*   Mümkünse test ekleyin.
-*   Yapay zeka modelleriyle çalışırken (örneğin API anahtarları) gizliliğe dikkat edin.
+### Reporting Bugs
+- Use the provided **Bug Report** template.
+- Describe the environment and steps to reproduce.
 
-## 📞 İletişim
+### Suggesting Enhancements
+- Use the **Feature Request** template.
+- Explain why this enhancement would be useful.
 
-Sorularınız mı var? Bir Sorun (Issue) açmaktan çekinmeyin veya doğrudan yapımcı ile iletişime geçin.
+### Pull Requests
+1. Fork the repo and create your branch from `main`.
+2. If you've added code that should be tested, add tests.
+3. If you've changed APIs, update the documentation.
+4. Ensure the test suite passes.
+5. Make sure your code lints (Black & Flake8).
 
----
-*Yaratıcılığın sınırlarını yapay zeka ile zorlayalım.*
+## Style Guide
+
+- **Python:** Follow [PEP 8](https://www.python.org/dev/peps/pep-0008/).
+- **Formatting:** Use `black` for auto-formatting.
+- **Documentation:** Use Google-style docstrings.
+
+## Communication
+
+Feel free to open an issue for discussion before starting major work.
