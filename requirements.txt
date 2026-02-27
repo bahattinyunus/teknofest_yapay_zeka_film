@@ -1,7 +1,21 @@
-# Post-processing requirements
-opencv-python
-ffmpeg-python
-moviepy
-pillow
-requests
-python-dotenv
+# Core AI and Media Processing
+opencv-python>=4.8.0
+moviepy>=1.0.3
+pillow>=10.0.0
+requests>=2.31.0
+python-dotenv>=1.0.0
+pydantic>=2.4.0
+
+# Orchestration & NLP
+langchain-core>=0.0.1
+langchain-openai>=0.0.1  # For OpenAI integration
+# langchain-community>=0.0.1  # For LLama-3 / Local models
+
+# Media Generation (API Clients)
+# runway-python
+# replicate
+
+# Testing & Linting
+pytest>=7.4.0
+black
+flake8
